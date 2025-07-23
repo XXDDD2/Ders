@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YKS Çalışma Programı</title>
+  <style>
+    :root {
+      --light-bg: #fff0f0;
+      --dark-bg: #1a1a1a;
+      --light-color: #000;
+      --dark-color: #fff;
+    }body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--light-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 1s ease, color 1s ease;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: backgroundScroll 60s linear infinite;
+}
+
+@keyframes backgroundScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+nav button {
+  background-color: #b30000;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #ff4d4d;
+}
+
+section {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-color);
+}
+
+.dark-mode section {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YKS 2025 - 30 Haftalık Çalışma Programı</h1>
+  </header>  <nav>
+    <button onclick="showSection('hafta1-10')">1-10. Hafta</button>
+    <button onclick="showSection('hafta11-20')">11-20. Hafta</button>
+    <button onclick="showSection('hafta21-30')">21-30. Hafta</button>
+    <button onclick="showSection('hoca')">YouTube Hoca Önerileri</button>
+    <button onclick="showSection('motivasyon')">Motivasyon</button>
+    <button onclick="showSection('kitap')">Kitap ve Deneme Önerileri</button>
+    <button onclick="showSection('istatistik')">İstatistik Takibi</button>
+    <button onclick="showSection('gunluk')">Günlük Çalışma Takibi</button>
+    <button onclick="showSection('puan')">Puan Tahmini Tablosu</button>
+  </nav>  <section id="hafta1-10">
+    <h2>📅 1-10. Hafta Programı</h2>
+    <ul>
+      <li>Hafta 1-3: Temel TYT konularına giriş (Sayılar, Paragraf, Coğrafya Temelleri)</li>
+      <li>Hafta 4-6: Problemler, Sözel Mantık, Harita Bilgisi, Tarih: İlk Uygarlıklar</li>
+      <li>Hafta 7-9: Grafikler, Tablo Yorumlama, Edebiyat: Şiir Bilgisi, Paragraf Yoğunlaştırma</li>
+      <li>Hafta 10: TYT Genel Tekrar ve TYT Denemesi</li>
+      <li><strong>Her hafta:</strong> En az 1 TYT denemesi + 3 saatlik günlük çalışma</li>
+    </ul>
+  </section>  <section id="hafta11-20">
+    <h2>📅 11-20. Hafta Programı</h2>
+    <ul>
+      <li>Hafta 11-13: AYT Matematik (Fonksiyonlar, Polinom), Servet-i Fünun Edebiyatı</li>
+      <li>Hafta 14-16: Türkiye’nin İklimi ve Coğrafi Konum, Milli Edebiyat</li>
+      <li>Hafta 17-19: Tarih: Kurtuluş Savaşı, Mat: 2. Dereceden Denklemler, Edebiyat tekrar</li>
+      <li>Hafta 20: AYT Genel Deneme + Zayıf Konuların Tekrarı</li>
+      <li><strong>Her hafta:</strong> TYT + AYT denemeleri dönüşümlü</li>
+    </ul>
+  </section>  <section id="hafta21-30">
+    <h2>📅 21-30. Hafta Programı</h2>
+    <ul>
+      <li>Hafta 21-23: Türev ve İntegral başlangıcı, TYT tekrarları</li>
+      <li>Hafta 24-26: Deneme çözüm ağırlıklı, eksik tamamlama</li>
+      <li>Hafta 27-29: Karma denemeler (TYT + AYT), motivasyon konuşmaları</li>
+      <li>Hafta 30: Final tekrarları + sınav simülasyonu</li>
+      <li><strong>Kaynak Önerisi:</strong> Hız ve Renk, 3D Yayınları, Aydın Denemeleri</li>
+    </ul>
+  </section>  <section id="hoca">
+    <h2>🎓 YouTube Hoca Önerileri</h2>
+    <p>Tüm branşlara özel öğretmen önerileri ve bağlantıları burada yer alır.</p>
+    <ul>
+      <li>Matematik: Eyüp B, Apotemi</li>
+      <li>Türkçe: Benim Hocam, Dinçer Hoca</li>
+      <li>Edebiyat: Yavuz Tuna</li>
+      <li>Tarih: Ahmet Hoca</li>
+      <li>Coğrafya: Coğrafya Murat</li>
+    </ul>
+  </section>  <section id="motivasyon">
+    <h2>💬 Motivasyon Mesajı</h2>
+    <p>
+      Zorlandığında unutma: Vazgeçersen her şey biter. Devam edersen, hayalin gerçek olur. Her gün yeniden başla, yeter ki vazgeçme.
+    </p>
+  </section>  <section id="kitap">
+    <h2>📚 Kitap ve Deneme Önerileri</h2>
+    <p>TYT - AYT kitap ve deneme tavsiyeleri:</p>
+    <ul>
+      <li>Matematik: 3D, Apotemi, Karekök</li>
+      <li>Türkçe: Paragrafik, Karekök Paragraf</li>
+      <li>Coğrafya-Tarih: Palme, Aydın Yayınları</li>
+      <li>Denemeler: Hız ve Renk, Aydın, Limit Yayınları</li>
+    </ul>
+  </section>  <section id="istatistik">
+    <h2>📊 İstatistik Takibi</h2>
+    <ul>
+      <li>Her denemeden sonra doğru-yanlış sayısı</li>
+      <li>Net değişimi</li>
+      <li>Süre kontrolü</li>
+      <li>Yanlış yapılan konuların listesi</li>
+    </ul>
+    <p>Öneri: Google Sheets ile grafik oluştur.</p>
+  </section>  <section id="gunluk">
+    <h2>📅 Günlük Çalışma Takibi</h2>
+    <ul>
+      <li>Günlük minimum hedef: 3 saat</li>
+      <li>Sabah 1 saat tekrar + öğle 1 saat yeni konu + akşam 1 saat soru çözümü</li>
+      <li>Her akşam: "Bugün ne öğrendim?" günlüğü</li>
+      <li>Uygulama önerisi: Habitica, Notion, Forest</li>
+    </ul>
+  </section>  <section id="puan">
+    <h2>📈 Puan Tahmini Tablosu</h2>
+    <p>Aşağıda yaklaşık net sayınıza göre hedef puanları görebilirsiniz:</p>
+    <table border="1" cellpadding="10">
+      <tr><th>Net Sayısı</th><th>Tahmini TYT Puanı</th></tr>
+      <tr><td>80+</td><td>450-500</td></tr>
+      <tr><td>65-79</td><td>390-449</td></tr>
+      <tr><td>50-64</td><td>330-389</td></tr>
+      <tr><td>35-49</td><td>270-329</td></tr>
+    </table>
+    <p>Not: Bunlar yaklaşık verilerdir. OBP ve AYT katkısı da eklenmelidir.</p>
+  </section>  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    const hour = new Date().getHours();
+    if (hour >= 19 || hour <= 6) {
+      document.body.classList.add('dark-mode');
+    }
+  </script></body>
+</html>
